@@ -36,7 +36,9 @@ const Article = ({ data }: ArticleProps) => {
             <h4 className="text-xs uppercase text-purple-500 font-bold">
               {data.category}
             </h4>
-            <p className="text-xs text-muted-foreground truncate">{data.Date}</p>
+            <p className="text-xs text-muted-foreground truncate">
+              {data.Date}
+            </p>
           </div>
           <p className="flex gap-x-1 items-center">
             <Avatar className="w-6 h-6 p-1 text-xs rounded-full">
@@ -63,7 +65,10 @@ const Article = ({ data }: ArticleProps) => {
         <div className="flex gap-x-2 overflow-hidden">
           {data.tags &&
             data.tags.map((tag) => (
-              <Button className="px-2 py-1 h-8 text-xs bg-slate-500/10 text-black text-muted-foreground hover:bg-slate-500/10">
+              <Button
+                key={tag}
+                className="px-2 py-1 h-8 text-xs bg-slate-500/10 text-black text-muted-foreground hover:bg-slate-500/10"
+              >
                 {tag}
               </Button>
             ))}
