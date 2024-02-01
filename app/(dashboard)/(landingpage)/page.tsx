@@ -1,10 +1,12 @@
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import Categories from "./_components/categories";
+import TopArticles from "./_components/top-articles";
+import TopStories from "./_components/top-stories";
 
 export default function Home() {
   return (
-    <main className="bg-background p-2 md:px-8 xl:px-32 pt-10">
+    <main className="bg-background px-2 md:pl-8 xl:pl-20 pt-10 pb-10">
       <div>
         <div>
           <h1 className="font-bold text-2xl">Hello Admin,</h1>
@@ -14,6 +16,8 @@ export default function Home() {
         </div>
         <div className="flex flex-col gap-x-10">
           <Categories />
+          <TopArticles />
+          <TopStories/>
         </div>
       </div>
     </main>

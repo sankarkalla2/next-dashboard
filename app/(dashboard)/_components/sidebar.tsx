@@ -10,7 +10,6 @@ import { cn } from "@/lib/utils";
 
 const Sidebar = () => {
   const pathname = usePathname();
-
   return (
     <aside className="hidden lg:flex w-60 fixed h-full pt-[70px] bg-[#ffffff] border-r-2 border-slate-100">
       <div className="w-full px-6 flex flex-col gap-y-2">
@@ -19,7 +18,10 @@ const Sidebar = () => {
             <Button
               className={cn(
                 "flex items-center w-full gap-x-2 text-sm",
-                route.href === pathname && "bg-[#9058FF]  text-white"
+                route.href === pathname && "bg-[#9058FF] text-white",
+                pathname.includes(route.href) &&
+                  route.href !== "/" &&
+                  "bg-[#9058FF]  text-white"
               )}
               variant="ghost"
               key={route.href}
