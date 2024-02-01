@@ -7,11 +7,13 @@ import { Button } from "../../../components/ui/button";
 
 import { dashBoardRoutes } from "@/lib/data";
 import { cn } from "@/lib/utils";
+import { Contact2 } from "lucide-react";
+import { DatePickerWithRange } from "./date-range-picker";
 
 const Sidebar = () => {
   const pathname = usePathname();
   return (
-    <aside className="hidden lg:flex w-60 fixed h-full pt-[70px] bg-[#ffffff] border-r-2 border-slate-100">
+    <aside className="hidden md:flex flex-col w-60 fixed h-full pt-[70px] bg-[#ffffff] border-r-2 border-slate-100">
       <div className="w-full px-6 flex flex-col gap-y-2">
         {dashBoardRoutes &&
           dashBoardRoutes.map((route) => (
@@ -38,6 +40,12 @@ const Sidebar = () => {
               </Link>
             </Button>
           ))}
+      </div>
+      <div className="px-4 pt-20">
+        <Button className="w-full h-12 flex gap-x-2 justify-start bg-[#F8FAFB] text-black hover:bg-[#F8FAFB] hover:shadow-sm">
+          <Contact2 />
+          Contact Support
+        </Button>
       </div>
     </aside>
   );

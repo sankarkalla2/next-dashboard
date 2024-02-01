@@ -13,7 +13,7 @@ const Categories = () => {
   return (
     <div className="flex items-center gap-x-2 overflow-auto flex-nowrap pt-10">
       {categorieItems.map((item) => (
-        <div>
+        <div key={item.name}>
           <Card className="pt-4 w-min-[150px] flex hover:shadow-md cursor-pointer">
             <CardContent className="flex items-center">
               <div className="flex h-full items-center gap-x-2">

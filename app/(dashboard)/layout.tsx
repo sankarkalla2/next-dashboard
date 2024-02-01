@@ -12,7 +12,7 @@ const DashboardLayout = ({ children }: DashboardLayoutChildren) => {
     <div>
       <Navbar />
       <Sidebar />
-      <div className="lg:pl-60 pt-[70px] bg-[#F8FAFB]">{children}</div>
+      <div className="md:pl-60 pt-[70px] bg-[#F8FAFB]">{children}</div>
     </div>
   );
 };
